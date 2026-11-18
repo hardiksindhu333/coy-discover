@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String   @id
+  name        String
+  age         Int
+  photoUrl    String
+  bio         String
+  city        String
+  college     String
+  interests   String
+  isCurrent   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  outgoingSwipes Swipe[] @relation("SwipeActor")
+  incomingSwipes Swipe[] @relation("SwipeTarget")
+  matchesA       Match[] @relation("MatchA")
+  matchesB       Match[] @relation("MatchB")
+}
+
+model Swipe {
+  id        String   @id @default(cuid())
+  actorId   String
+  targetId  String
+  direction String
+  createdAt DateTime @default(now())
+
+  actor  User @relation("SwipeActor", fields: [actorId], references: [id], onDelete: Cascade)
+  target User @relation("SwipeTarget", fields: [targetId], references: [id], onDelete: Cascade)
+
+  @@unique([actorId, targetId])
+  @@index([actorId])
+  @@index([targetId])
+}
+
+model Match {
+  id        String   @id @default(cuid())
+  userAId   String
+  userBId   String
+  createdAt DateTime @default(now())
+
+  userA User @relation("MatchA", fields: [userAId], references: [id], onDelete: Cascade)
+  userB User @relation("MatchB", fields: [userBId], references: [id], onDelete: Cascade)
+
+  @@unique([userAId, userBId])
+  @@index([userAId])
+  @@index([userBId])
+}
