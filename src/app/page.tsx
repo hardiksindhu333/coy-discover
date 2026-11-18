@@ -5,7 +5,7 @@ export default function Home() {
         <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#a9755e]">
           Coy
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-playfair)] text-5xl text-stone-800 md:text-6xl">
+        <h1 className="mt-3 font-(family-name:--font-playfair)] text-5xl text-stone-800 md:text-6xl">
           Hello, Alex
         </h1>
         <p className="mt-4 text-stone-500">

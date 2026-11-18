@@ -51,7 +51,7 @@ export default function MatchesPage() {
           </button>
         </section>
       ) : matches.length === 0 ? (
-        <section className="mt-8 rounded-[2rem] border border-dashed border-[#dacbbd] bg-[#fffdf9] px-6 py-16 text-center">
+        <section className="mt-8 rounded-4xl border border-dashed border-[#dacbbd] bg-[#fffdf9] px-6 py-16 text-center">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#f2e8dc] text-[#a56c58]">
             <Heart size={26} />
           </div>
@@ -65,7 +65,7 @@ export default function MatchesPage() {
           {matches.map((match) => (
             <article
               key={match.id}
-              className="overflow-hidden rounded-[1.5rem] border border-white bg-[#fffdf9] shadow-[0_10px_30px_rgba(72,52,38,0.10)]"
+              className="overflow-hidden rounded-3xl border border-white bg-[#fffdf9] shadow-[0_10px_30px_rgba(72,52,38,0.10)]"
             >
               <Image
                 src={match.profile.photoUrl}

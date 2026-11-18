@@ -18,7 +18,7 @@ export function MatchModal({ profile, onClose }: MatchModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-[#2e2119]/70 p-5 backdrop-blur-sm"
+          className="fixed inset-0 z-70 flex items-center justify-center bg-[#2e2119]/70 p-5 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-labelledby="match-title"
@@ -28,7 +28,7 @@ export function MatchModal({ profile, onClose }: MatchModalProps) {
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.92, opacity: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="relative w-full max-w-sm rounded-[2rem] bg-[#fffaf3] p-7 text-center shadow-2xl"
+            className="relative w-full max-w-sm rounded-4xl bg-[#fffaf3] p-7 text-center shadow-2xl"
           >
             <button
               type="button"

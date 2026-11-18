@@ -34,7 +34,7 @@ export function ProfileCard({
       onDragEnd={handleDragEnd}
       animate={{ x: exitX, rotate: exitRotate, opacity: exitDirection ? 0 : 1 }}
       transition={{ type: "spring", stiffness: 220, damping: 24 }}
-      className="absolute inset-0 h-full touch-pan-y overflow-hidden rounded-[2rem] border border-white/70 bg-[#fffdf9] shadow-[0_24px_70px_rgba(72,52,38,0.18)]"
+      className="absolute inset-0 h-full touch-pan-y overflow-hidden rounded-4xl border border-white/70 bg-[#fffdf9] shadow-[0_24px_70px_rgba(72,52,38,0.18)]"
       aria-label={`${profile.name}, ${profile.age}`}
     >
       <div className="relative h-[58%] min-h-72 overflow-hidden sm:h-[62%]">
@@ -47,7 +47,7 @@ export function ProfileCard({
           draggable={false}
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/5" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-black/5" />
         <div className="absolute inset-x-0 bottom-0 p-5 text-white">
           <h1 className="text-4xl font-semibold tracking-tight">
             {profile.name}, <span className="font-normal">{profile.age}</span>
