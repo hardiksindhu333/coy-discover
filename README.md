@@ -2,6 +2,22 @@
 
 A standalone, mobile-first discovery experience inspired by Coy. The app demonstrates swipe interactions, durable SQLite persistence, mutual matching, and privacy-first handling of incoming likes.
 
+## Part A: Suggested Coy features
+
+These suggestions build on Coy's anonymous, double-blind matching experience.
+
+### 1. A private way to start the conversation after a match
+
+After two people add each other, Coy could offer an optional set of short, editable conversation starters and a button to continue through the contact method already available in the match screen. For example, a person could choose a simple opener such as, “Would you like to get coffee sometime?”
+
+**Why it would help:** A mutual match answers whether the feeling is shared, but starting the conversation can still feel awkward. Gentle prompts would help users take the next step and get more value from a match, while keeping Coy focused on making introductions rather than adding an in-app chat system.
+
+### 2. An optional anonymous message with a crush request
+
+When adding a crush, a user could optionally attach a short message. The recipient would see that someone sent a crush request and read the message, but the sender's name and contact details would remain hidden. The sender would be revealed only if the recipient adds them back and the request becomes a mutual match. The message should be clearly labeled anonymous, with a reminder not to include identifying details.
+
+**Why it would help:** A recipient may be more willing to respond when the request includes a little context or a warm note, instead of accepting only to find out who sent it. Keeping the sender hidden until a mutual match preserves Coy's central privacy promise while giving users a more personal way to express interest.
+
 ## Features
 
 - Home placeholder and bottom navigation
