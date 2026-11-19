@@ -41,7 +41,12 @@ export function MatchModal({ profile, onClose }: MatchModalProps) {
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1, rotate: [0, -8, 8, 0] }}
-              transition={{ delay: 0.12, type: "spring" }}
+              transition={{
+                delay: 0.12,
+                type: "tween",
+                duration: 0.55,
+                ease: "easeInOut",
+              }}
               className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#b95f50] text-white"
             >
               <Heart fill="currentColor" size={30} />
